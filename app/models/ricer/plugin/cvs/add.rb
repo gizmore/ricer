@@ -9,6 +9,7 @@ module Ricer::Plugin::Cvs
     needs_permission :voice
     
     def execute
+      byebug
       return rply :err_dup_name unless Repo.by_name(argv[0]).nil?
       return rply :err_dup_url unless Repo.by_url(argv[0]).nil?
       repo = Repo.new({
@@ -20,15 +21,20 @@ module Ricer::Plugin::Cvs
       })
       repo.validate!
       Ricer::Thread.new do |t|
-        system = System.new(repo, self, setting(:default_delay))
-        system_name = system.detect
-        return rply :err_system if system_name.nil?
-        system = System.get_system(system_name).new(repo, self, setting(:default_delay))
-        return rply :err_system if system.nil?
-        repo.system = system_name
-        repo.revision = system.revision
-        repo.save!
-        return rply :msg_repo_added, name:repo.name, url:repo.url, type:repo.system
+        begin
+          byebug
+          system = System.new(repo, self, setting(:default_delay))
+          system_name = system.detect
+          return rply :err_system if system_name.nil?
+          system = System.get_system(system_name).new(repo, self, setting(:default_delay))
+          return rply :err_system if system.nil?
+          repo.system = system_name
+          repo.revision = system.revision
+          repo.save!
+          rply :msg_repo_added, name:repo.name, url:repo.url, type:repo.system
+        rescue => e
+          reply_exception e
+        end
       end
     end
     
