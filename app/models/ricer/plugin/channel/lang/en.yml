@@ -1,0 +1,22 @@
+en:
+  ricer:
+    plugin:
+      channel:
+        join:
+          usage: '<channel>'
+          description: 'Make $BOT$ join a channel.'
+          err_already_there: 'I am already in this channel.'
+          msg_trying_to_join: 'Trying to join this channel.'
+          config:
+            auto: 'Join channel on startup?'
+            onkick: 'Rejoin channel when being kicked?'
+        part:
+          usage: '[<channel>]'
+          description: 'Make $BOT$ leave a channel.'
+        partu:
+          usage: '<channel>'
+          description: 'Make $BOT$ leave a channel.'
+        autojoin:
+          description: 'Automatically joins channels after connecting.'
+        rejoin:
+          description: 'Automatically rejoins channels after a kick.'

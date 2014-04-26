@@ -1,0 +1,4 @@
+en:
+#  x_minute: '%{x} minute'
+  x_minutes: '%{x} minutes'
+

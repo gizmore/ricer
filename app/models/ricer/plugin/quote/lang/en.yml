@@ -1,0 +1,21 @@
+en:
+  ricer:
+    plugin:
+      quote:
+        err_quote: 'Quote not found.'
+        err_vote: 'Vote not saved.'
+        msg_voted: 'Vote registered.'
+        list:
+          usage: ''
+          description: 'Shows statistics about the quotes'
+          msg_list: 'There are %{count} quotes in the datbase.'
+        quote:
+          usage: '[<searchterm|id>]'
+          description: 'Display or search for a quote.'
+          msg_quote: 'Quote %{id} - %{quote} - %{date} by {%user} on %{server} in %{channel}. Rated: %{%rate}'
+        voteup:
+          usage: '<id>'
+          description: 'Vote up a quote.'
+        votedown:
+          usage: '<id>'
+          description: 'Vote a quote down.'

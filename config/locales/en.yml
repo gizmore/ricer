@@ -1,0 +1,100 @@
+en:
+  ricer:
+    plug:
+      show:
+        usage: '<id|searchterm>'
+        description: 'Search the %{classname} database and display the result.'
+      list:
+        usage: '<page|searchterm> [<searchpage>]'
+        description:
+          one: 'Search or list the %{classname} database. There is %{count} record in the db.'
+          other: 'Search or list the %{classname} database. There are %{count} records in the db.'
+        msg_show_item: '%{classname}#{item_id}-{#{name}}'
+        msg_show_list_item: '%{classname}#{item_id}-{#{name}}'
+        msg_list_item_page: '%{classname}, page %{page}/%{pages}: %{out}.'
+        err_no_list_items: 'There could be no %{classname} found.'
+      extender:
+        requires_retype:
+          msg_retype: 'Please retype your command to confirm your action.'
+        bruteforce_protected:
+          err_bruteforce: 'Please wait %{timeout} before you try again.'
+        requires_confirmation:
+          msg_confirm: 'Confirm with: %{phrase}'
+          confirmation_word: 'iamsure'
+        forces_authentication:
+          err_not_authenticated: 'You explicitly need to authenticate to use this function.'
+        needs_permission:
+          err_permission: 'You need the %{char} / %{perm} permission to use this function here.'
+        works_in:
+          err_only_private: 'This works only in private.'
+          err_only_channel: 'This works only in channels.'
+        has_subcommand:
+          help: 'help'
+          msg_help: '%{description} Usage: $TRIGGER$$COMMAND$ <%{subcommands}> ... Use $TRIGGER$$COMMAND$ help <command> to see help for a certain command.'
+    
+    err_lang_iso: 'Invalid language ISO code.'
+    err_user: 'This user is unknown.'
+    err_user_name: 'Invalid username.'
+    err_channel_name: 'Invalid channel name.'
+    err_plugin: 'Unknown plugin.'
+    err_exception: 'Ruby Exception: "%{message}" in %{location}.'
+    err_stub_trigger: 'This function is not implemented yet.'
+    err_pin: 'The code you entered is wrong.'
+    err_password: 'The password you entered is wrong.'
+    err_trigger_disabled: 'This function is currently disabled here.'
+    err_page: 'This page does not exist.'
+    err_record_invalid: 'Can not save %{name}: %{message}.'
+    msg_help: 'Usage: $TRIGGER$%{usage}. %{description} This works %{cmdscope} and requires %{permission} permissions.'
+
+    irc:
+      priviledge:
+        p: 'public'
+        r: 'member'
+        l: 'authenticated'
+        v: 'voice'
+        h: 'halfop'
+        o: 'operator'
+        s: 'staff'
+        a: 'admind'
+        f: 'founder'
+        i: 'IRCop'
+        x: 'owner'
+        y: 'responsible'
+      scope:
+        u: 'private'
+        c: 'channel'
+        e: 'everywhere'
+        b: 'bot'
+        s: 'server'
+      scope_in:
+        u: 'in private'
+        c: 'in channels'
+        e: 'everywhere'
+      setting:
+        boolean_0: 'no'
+        boolean_1: 'yes'
+        hint:
+          strlen: "STRLEN"
+        type:
+          boolean: 'bool'
+          string: 'text'
+          pin: 'pin'
+          password: 'pass'
+          integer: 'int'
+          float: 'float'
+          date: 'date'
+          time: 'time'
+          duration: 'wait'
+          
+    lang_iso:
+      en: 'English'
+      de: 'German'
+      fam: 'Famster'
+      bot: 'Machine'
+      ibdes: 'DataExchange'
+    dateformats:
+      day: ''
+      date: ''
+      long: ''
+      exact: ''
+      

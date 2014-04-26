@@ -1,0 +1,22 @@
+en:
+  ricer:
+    plugin:
+      slapwarz:
+        slapinfo:
+          usage: '<item|verb|adverb|adjective>'
+          description: 'Show information about a slapitem.'
+        slapstats:
+          usage: '[<gnah>] <user>'
+          description: 'Show statistics for a user'
+        slap:
+          usage: '<user>'
+          description: 'Slap your target! Use abbreviations to avoid highlighting your victim.'
+          verb:
+            slap: 'slaps'
+          adverb:
+            slowly: 'slowly'
+          adjective:
+            small: 'small'
+          item:
+            trout: 'trout'
+            

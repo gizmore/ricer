@@ -1,0 +1,4 @@
+module Ricer::IrcColors
+  
+  
+end

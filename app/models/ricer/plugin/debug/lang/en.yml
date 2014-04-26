@@ -1,0 +1,34 @@
+en:
+  ricer:
+    plugin:
+      debug:
+        msg_chaninfo: '%{id}-%{name} is located on server %{server}. Memory Address: %{channel}'
+        plugdebug:
+          usage: '<plugin>'
+          description: 'Print logical info about a plugin.'
+          msg_plug_info: 'Plugin %{modulename}/%{classname}. Path: %{path}. Trigger: %{trigger}. Scope: %{plugscope}. Permission: %{permission}.'
+        chandebugc:
+          usage: '[<channel>]'
+          description: 'Show logical info of a channel object.'
+        chandebugp:
+          usage: '<channel>'
+          description: 'Show logical info of a channel object.'
+        dbtrace:
+          usage: ''
+          description: 'Toggle database console logging on and off.'
+          msg_on: 'Database query inspector enabled.'
+          msg_off: 'Database query inspector disabled.'
+        userdebug:
+          usage: '[<user>]'
+          description: 'Show logical info of a user object.'
+          msg_userinfo: '%{id}-%{user} is known as %{hostmask} on %{server} Mode: %{usermode}. Perm: %{servpriv}.'
+        userdebugc:
+          usage: '[<user>]'
+          description: 'Show logical info of a user object and his channel permissions.'
+          msg_userinfo: '%{id}-%{user} is known as %{hostmask} on %{server} Mode: %{usermode}. Perm: %{servpriv}. In %{channel} he got mode %{chanmode} with %{chanpriv}.'
+        console:
+          usage: '<...system commands...>'
+          description: 'Execute system commands via $BOT$. This is a security hole and for the lulz only.'
+        railsc:
+          usage: '<...ruby commands...>'
+          description: 'Execute ruby commands inside the $BOT$ environment. This is a security hole and for debugging only.'

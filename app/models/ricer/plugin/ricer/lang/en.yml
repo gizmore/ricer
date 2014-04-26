@@ -1,0 +1,11 @@
+en:
+  ricer:
+    plugin:
+      ricer:
+        begin:
+          usage: '<command to span multiple lines...>'
+          description: 'Begin a multiline command to execute commands with huge data parameters. Finish the command with $TRIGGER$end. A space is inserted after your begin intro.'
+        end:
+          usage: ''
+          description: 'Finish a command started with $TRIGGER$begin.'
+          err_no_begin: 'You have to start a multiline with $TRIGGER$begin first.'

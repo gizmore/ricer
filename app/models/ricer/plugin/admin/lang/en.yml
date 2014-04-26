@@ -1,0 +1,16 @@
+en:
+  ricer:
+    plugin:
+      admin:
+        die:
+          usage: '[<quitmessage..>]'
+          description: 'Make $BOT$ quit all servers and die.'
+          default_message: '%{user} used the die command.'
+        raw:
+          usage: '<..raw irc message..>'
+          description: 'Send raw commands to an irc server.'
+        reload:
+          usage: ''
+          description: 'Reload plugin code at runtime.'
+          msg_reloading: 'Reloading ricer code and plugins.'
+          msg_reloaded: 'Everything reloaded and ready to crash.'

@@ -1,0 +1,26 @@
+en:
+  ricer:
+    plugin:
+      rcb:
+        msg_now_playing: 'Now playing: %{title}. (%{length})'
+        err_none_playing: 'There is currently no song playing on RadioCrazyBase.'
+        fav:
+          usage: '[<topten|mostplayed>] [<page>]'
+          description: 'Mark the current played song as one of your favorites or browse the topten.'
+          msg_faved: 'You marked %{title} as one of your favorite songs.'
+          msg_topten_page: 'Most favorized, page %{page}/%{pages}: %{out}.'
+          msg_mostplayed_page: 'Most played, page %{page}/%{pages}: %{out}.'
+        favs:
+          usage: '[<page|songname>] [<searchpage>]'
+          description: 'Show or search your favorite songs.'
+          err_empty_page: 'No favorite songs found.'
+          msg_fav_page: 'Favorite songs page %{page}/%{pages}: %{out}.'
+        unfav:
+          usage: ''
+          description: ''
+        playing:
+          trigger: 'song'
+          usage: '[<page>]'
+          description: 'Show the current song that is playing on RadioCrazyBase or browse the playlist history.'
+          err_empty_page: 'This page is empty.'
+          msg_history_page: 'Playlist page %{page}/%{pages}: %{out}.'

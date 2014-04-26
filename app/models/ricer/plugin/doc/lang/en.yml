@@ -1,0 +1,7 @@
+en:
+  ricer:
+    plugin:
+      doc:
+        php:
+          usage: '[<searchterm>]'
+          description: 'Search the http://php.net documentation for functions.'

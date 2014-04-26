@@ -1,0 +1,7 @@
+en:
+  ricer:
+    plugin:
+      profile:
+        profile:
+          usage: ''
+          description: 'Show the logging options for this channel.'

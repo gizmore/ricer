@@ -1,0 +1,9 @@
+en:
+  ricer:
+    plugin:
+      drink:
+        beer:
+          usage: ''
+          description: ''
+        cocktail:
+          usage: ''

@@ -1,0 +1,12 @@
+en:
+  ricer:
+    plugin:
+      test:
+        ping:
+          usage: ''
+          description: 'Test your connection by requesting a repsonse.'
+          pong: 'This is pong number %{count} since last reload, and pong number %{global} in total.'
+        timer:
+          usage: ''
+          description: 'Simple test for threaded triggers.'
+          timeout: 'Wake Up! Little Suuuzy... WAKEUP!'

@@ -1,0 +1,14 @@
+en:
+  ricer:
+    plugin:
+      mc:
+        init:
+          usage: '[<!all|playerlist...>]'
+          description: 'Initiate a new game of musical chairgame. After the music stopped you use $TRIGGER$mc sit to take a seat'
+          err_running: 'A game is already running here.'
+          msg_created: 'A new musical chairgame has been initiated... the music is playing!'
+        sit:
+          usage: '<seat_number>'
+          description: ''
+          err_music_playing: 'The music is still playing'
+          err_no_game: 'There is no musical chairgame running here. Start one with init.'

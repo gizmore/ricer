@@ -1,0 +1,55 @@
+en:
+  ricer:
+    plugin:
+      auth:
+        err_permstring: 'Invalid permission string. It has to start with + or - and followed by a valid priviledge.'
+        err_permission: 'You have not sufficient permissions to do that.'
+        err_unregistered: 'The user is not registered yet.'
+        msg_no_change: 'The permissions have not changed.'
+        msg_show_chan: '%{user} has %{bitstring} in %{channel} on %{server}.'
+        msg_change_chan: '%{user} now has %{bitstring} in %{channel} on %{server}.'
+        autologin:
+          msg_logged_in: 'You just have been logged in by NickServ.'
+        servermod:
+          usage: '[<user>] [<perms>]'
+          description: 'Show or set server permissions for a user.'
+          msg_mods: '%{user} has +%{bitstring} permissions on %{server}.'
+          msg_changed: '%{user} got changed to %{bitstring} on %{server}.'
+        channelmodu:
+          usage: '<channel> [<user>] [<perms>]'
+          description: 'Show or set channel permissions for a user.'
+        channelmodc:
+          usage: '[<user>] [<perms>]'
+          description: 'Show or set channel permissions for a user.'
+        login:
+          usage: '<password>'
+          description: 'Authenticates you with $BOT$.'
+          err_already_authenticated: 'You are already authenticated. Maybe by Autologin?'
+          err_wrong_password: 'Your submitted password is wrong.'
+          msg_authenticated: 'Welcome back, you are now authenticated.'
+        logout:
+          usage: ''
+          description: 'Logs you out.'
+          msg_logged_out: 'You are now logged out.'
+        register:
+          usage: '<new_password> [<old_password>]'
+          description: 'Registers your with $BOT$ or changes your password.'
+          err_already_registered: 'You are already registered. Use "$TRIGGER$$COMMAND$ <new_password> <old_password>" to change your password.'
+          msg_registered: 'You are now registered and authenticated.'
+          msg_changed_pass: 'Your password has been changed and you are now authenticated.'
+        email:
+          usage: '[<address>] [<code>]'
+          description: 'Manage or show your email address.'
+          msg_show: 'Your email address is set to %{email}.'
+          msg_none: 'You don´t have an email address set yet.'
+          msg_sent: 'A confirmation email has been sent to %{email}. The confirmation code is valid for %{duration}.'
+          err_address: 'The entered email address is invalid.'
+          err_code: 'The entered confirmation code does not match.'
+          msg_set: 'Your email address is now set to %{email}.'
+          mail_subj: 'Ricer Bot Registration'
+          mail_body: "Hello %{user}\n\nThank you very much for registering with the ricer IRC bot.\n\nTo confirm your mail address, type: $TRIGGER$$COMMAND$ %{email} %{code}\n\nKind Regards\nThe ricer staff"
+        super:
+          usage: '<password>'
+          description: 'Elevates your permissions.'
+          err_password: 'Your submitted password is wrong.'
+          msg_elevated: 'Your priviledges on server and channels has been lifted to %{change}.'

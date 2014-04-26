@@ -1,0 +1,9 @@
+en:
+  ricer:
+    plugin:
+      art:
+        fu:
+          description: 'Display wonderful creative artwork by SceneCAT.M0D.'
+        cowsay:
+          usage: '<...message here...>'
+          description: 'Use the linux cowsay command to print ascii arts with a message. Use "$TRIGGER$confu $COMMAND$ image [<value>]" to change your default ascii art picture.'
