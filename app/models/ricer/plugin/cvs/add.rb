@@ -9,7 +9,6 @@ module Ricer::Plugin::Cvs
     needs_permission :voice
     
     def execute
-      byebug
       return rply :err_dup_name unless Repo.by_name(argv[0]).nil?
       return rply :err_dup_url unless Repo.by_url(argv[0]).nil?
       repo = Repo.new({
@@ -22,7 +21,6 @@ module Ricer::Plugin::Cvs
       repo.validate!
       Ricer::Thread.new do |t|
         begin
-          byebug
           system = System.new(repo, self, setting(:default_delay))
           system_name = system.detect
           return rply :err_system if system_name.nil?

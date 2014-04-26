@@ -21,7 +21,6 @@ module Ricer::Plugin::Cvs
     def detect
       repo.rmdir
       SYSTEMS.each do |name|
-        byebug
         result = get_system(name).new(@repo, @plugin).working?
         return nil if result.nil?
         return name if result

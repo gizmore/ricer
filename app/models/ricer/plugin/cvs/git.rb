@@ -43,8 +43,6 @@ module Ricer::Plugin::Cvs
     
     def checkout
       
-      byebug
-      
       return nil if self.class.loading?
       
       self.class.loading = true
