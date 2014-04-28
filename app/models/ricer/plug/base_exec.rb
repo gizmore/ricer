@@ -1,7 +1,7 @@
 module Ricer::Plug
   class BaseExec < BaseArgs
     
-    def self.triggered?(command); (command+' ').start_with?(trigger); end
+    def self.triggered?(command); (command+' ').start_with?(trigger+' '); end
 
     protected
     

@@ -101,7 +101,7 @@ module Ricer::Plugin::Rss
           feed = RSS::Parser.parse(rss)
           collect = []
           feed.items.each do |item|
-            #puts item
+#            puts item
             collect.push(item) if item.pubDate > self.checked_at
           end
           feed_has_news(plugin, feed, collect) unless collect.empty?
@@ -163,7 +163,8 @@ module Ricer::Plugin::Rss
     end
     
     def feedmessage(plugin, item)
-      plugin.t :msg_got_news, name:name, title:item.title, link:item.link
+      link = item.link == nil ? item.description : item.link
+      plugin.t :msg_got_news, name:name, title:item.title, link:link
     end
     
   end

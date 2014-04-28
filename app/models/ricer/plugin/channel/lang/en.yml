@@ -11,9 +11,11 @@ en:
             auto: 'Join channel on startup?'
             onkick: 'Rejoin channel when being kicked?'
         part:
+          trigger: 'part'
           usage: '[<channel>]'
           description: 'Make $BOT$ leave a channel.'
         partu:
+          trigger: 'part'
           usage: '<channel>'
           description: 'Make $BOT$ leave a channel.'
         autojoin:

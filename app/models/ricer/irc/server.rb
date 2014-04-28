@@ -116,7 +116,7 @@ module Ricer::Irc
     end
     
     def joined_channel?(channel)
-      get_channel(channel.name) != nil
+      get_channel(channel) != nil
     end
     
     def should_cache?; true; end

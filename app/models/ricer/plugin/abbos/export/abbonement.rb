@@ -134,8 +134,8 @@ module Ricer::Plug
     def execute
       abbo_item = self.abbo_item(argv[0])
       return rplyr 'plug.abbo.err_abbo_item', classname:abbo_classname if abbo_item.nil?
-      return rplyr 'plug.abbo.err_invalid_target', classname:abbo_classname unless abbo_item.can_abbonement?(target)
-      return rplyr 'plug.abbo.err_not_abboed' unless abbo_item.abbonemented?(target)
+      return rplyr 'plug.abbo.err_invalid_target', classname:abbo_classname unless abbo_item.can_abbonement?(abbo_target)
+      return rplyr 'plug.abbo.err_not_abboed' unless abbo_item.abbonemented?(abbo_target)
       Ricer::Plugin::Abbos::Abbonement.where({abbo_target:abbos_target, abbo_item:abbos_item(abbo_item)}).delete_all
       return rplyr 'plug.abbo.msg_unabbonemented', classname:abbo_classname
     end

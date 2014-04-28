@@ -22,7 +22,7 @@ module Ricer::Plugin::Channel
         end
         
         # And part
-        if server.joined_channel? channel
+        if server.joined_channel? channel.name
           server.part channel
         end
       end

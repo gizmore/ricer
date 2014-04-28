@@ -67,7 +67,6 @@ module Ricer::Net::Irc
     end
     
     def send_splitted(to, prefix, text)
-      @queue[to] ||= Ricer::Net::Queue::Object.new(to)
       @server.ricer_sends(to, text)
       length = MAXLEN - prefix.length
       text.scan(Regexp.new(".{1,#{length}}(?:\s|$)|.{1,#{length}}")).map(&:strip).each do |line|
@@ -76,6 +75,7 @@ module Ricer::Net::Irc
     end
     
     def send_queued(line, to)
+      @queue[to] ||= Ricer::Net::Queue::Object.new(to)
       @queue[to].push(line)
     end
     

@@ -134,10 +134,13 @@ module Ricer::Plugin::Cvs
       command = "cd #{repo.dir_arg} && git --no-pager log --reverse --format=medium -#{n} | head -n 30"
       out = `#{command}`
       
+      puts out
+      
       i = 0
       i = 1 unless out.index('Merge:').nil?
       
       out = out.split("\n", 5+i)
+      puts out
       
       comment = out[4+i]
       comment = out[4+i].substr_to("\ncommit ") if n > 1
