@@ -51,6 +51,7 @@ module Ricer::Net::Irc
     def send_nick(nickname)
       server.botnick = nickname.next_nickname
       send_line "NICK #{nickname.next_nickname}"
+      authenticate(nickname)
     end
     
     def authenticate(nickname)

@@ -11,6 +11,9 @@ module Ricer::Plugin::Ricer
     
     def on_001
       server.login_success
+      if server.instance_variable_defined?('@added_by')
+        added_by = server.remove_instance_variable('@added_by')
+      end
     end
 
      def on_002

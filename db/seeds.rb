@@ -37,3 +37,8 @@ if Ricer::Irc::Server.in_domain('german-elite.net').count == 0
   server = Ricer::Irc::Server.create({url:'ircs://DOminiOn.german-elite.net:6670'}) 
   nick = Ricer::Irc::Nickname.create({server:server, nickname:'ricer'})
 end
+
+if Ricer::Irc::Server.in_domain('tasteless.se').count == 0
+  server = Ricer::Irc::Server.create({url:'ircs://irc.tasteless.se:6697'}) 
+  nick = Ricer::Irc::Nickname.create({server:server, nickname:'ricer'})
+end

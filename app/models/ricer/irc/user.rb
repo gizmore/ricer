@@ -107,7 +107,7 @@ module Ricer::Irc
   
     def authenticate!(password)
       return @authenticated = false unless registered?
-      @authenticated = BCrypt::Password.new(self.hashed_password).is_password?(password)
+      login! if BCrypt::Password.new(self.hashed_password).is_password?(password)
     end
     
     def login!

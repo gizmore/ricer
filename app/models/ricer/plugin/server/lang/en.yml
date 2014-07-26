@@ -1,0 +1,11 @@
+en:
+  ricer:
+    plugin:
+      server:
+        join:
+          trigger: 'join_server'
+          usage: '<server>'
+          description: 'Rejoin or add a new server.'
+          err_uri_scheme: 'Server not found and Invalid URI scheme. Please try ircs://irc.gizmore.org:6666'
+          
+          

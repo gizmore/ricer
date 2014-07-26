@@ -38,6 +38,12 @@ module Ricer::Irc
       @conn_once || (@conn_attempt >= 4)
     end
     
+    search_syntax do
+      search_by :text do |scope, phrases|
+        scope.where_like([:id, :url] => phrases)
+      end
+    end
+    
     def fresh_cache
       @last_connect = Time.now.to_f
       @conn_attempt = 1
@@ -123,6 +129,7 @@ module Ricer::Irc
     
     def startup
       bot.log_info("Enterting mainloop for #{hostname}")
+      byebug
       fresh_cache
       while bot.running
         if cooldown?

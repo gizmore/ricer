@@ -7,14 +7,14 @@ en:
         msg_add_abbo: 'The %{name} feed will now be announced here.'
         msg_rem_abbo: 'The %{name} feed will not be announced here anymore.'
         msg_abbos: '%{count} feeds abbonemented: %{out}.'
+        msg_feed: 'Feed#%{id}: %{name} %{title} %{description}'
+        msg_list_item: 'Feed#%{id}: %{name}'
         rss:
           trigger: 'feed'
           description: 'Manage RSS Feeds.'
           msg_got_news: '[%{name}] %{title} - %{link}'
         list:
           trigger: 'feeds'
-          msg_feed: 'Feed#%{id}: %{name} %{title} %{description}'
-          msg_list_item: 'Feed#%{id}: %{name}'
         add:
           usage: '<name> <url>'
           description: 'Add an rss news feed to the $BOT$ database.'
